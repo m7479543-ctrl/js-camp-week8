@@ -84,14 +84,16 @@ async function removeProduct(cartId) {
   // 請實作此函式
   // 提示：呼叫 deleteCartItem()
   // 回傳格式：{ success: true, data: ... } / { success: false, error: ... }
-  const validation = validateCartQuantity(quantity);
   try {
-    const result = await deleteCartItem(cartId);
-    return { success: true, data: result };
+    const data = await deleteCartItem(cartId);
+    return {
+      success: true,
+      data
+    };
   } catch (error) {
     return {
       success: false,
-      error: error.message,
+      error: error.message
     };
   }
 }

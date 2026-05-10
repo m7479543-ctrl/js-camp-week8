@@ -41,7 +41,7 @@ async function placeOrder(userInfo) {
 async function getOrders() {
   // 請實作此函式
   // 提示：呼叫 fetchOrders() 取得訂單陣列並回傳
-  const ordersc=await fetchOrders();
+  const orders=await fetchOrders();
   return orders;
 }
 

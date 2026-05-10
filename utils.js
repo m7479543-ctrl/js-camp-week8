@@ -90,7 +90,7 @@ function validateOrderUser(data) {
     errors.push('地址為必填');
   }
 
-  if (!payment || !['ATM', '信用卡', 'ApplePay'].includes(payment)) {
+  if (!payment || !['ATM', 'Credit Card', 'ApplePay'].includes(payment)) {
     errors.push('付款方式不正確');
   }
 
